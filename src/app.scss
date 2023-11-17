@@ -1,0 +1,52 @@
+@import "sass/fonts";
+@import "sass/variables";
+
+html {
+  scroll-snap-type: y mandatory;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: Montserrat, sans-serif;
+  color: $text-color;
+  background-color: $background-color;
+}
+
+a {
+  text-decoration: none;
+  color: currentColor;
+}
+
+section {
+  height: 100svh;
+  scroll-snap-align: center;
+  overflow: hidden;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $text-color;
+  width: 325px;
+  height: 70px;
+  border: 0;
+  background-color: $primary-color;
+  font-size: 30px;
+  font-weight: 600;
+  transition: 0.1s;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $dark-primary-color;
+  }
+
+  &.alt {
+    background-color: transparent;
+    border: 3px solid $text-color;
+
+    &:hover {
+      background-color: change-color($text-color, $alpha: 0.1);
+    }
+  }
+}

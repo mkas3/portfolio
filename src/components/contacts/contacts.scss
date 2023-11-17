@@ -1,0 +1,33 @@
+@import "src/sass/variables";
+
+.contacts {
+  height: clamp(150px, 30vw, 200px);
+  border-top: 1px solid $separator-color;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  row-gap: clamp(10px, 1vw ,24px);
+
+  .references {
+    display: flex;
+    column-gap: clamp(20px, 2vw, 16px);
+
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: clamp(35px, 10vw, 70px);
+      aspect-ratio: 1;
+    }
+  }
+
+}
+
+@media screen and (max-width: 500px) {
+  .contacts {
+    .copyright {
+      font-size: 12px;
+    }
+  }
+}

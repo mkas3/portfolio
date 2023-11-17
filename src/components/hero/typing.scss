@@ -1,0 +1,64 @@
+@use "sass:string";
+@import "src/sass/variables";
+
+$text: ("frontend разработчик",
+"backend разработчик",
+"немного дизайнер",
+"трудолюбивый человек"
+);
+$texts: length($text);
+$texts-letters: ();
+$letters: 0;
+$pause-letters: 5;
+
+@for $i from 1 through $texts {
+  $length: str-length(nth($text, $i)) + $pause-letters;
+
+  $texts-letters: append($texts-letters, $length);
+  $letters: $letters + $length;
+}
+
+.typing {
+  &::before {
+    color: $secondary-color;
+    content: "";
+    animation: typing 25s infinite;
+    will-change: contents;
+    backface-visibility: hidden;
+  }
+
+  &::after {
+    content: "";
+    border-right: 3px solid currentColor;
+    animation: cursor 0.5s ease-in-out infinite alternate;
+    backface-visibility: hidden;
+  }
+}
+
+@keyframes typing {
+  $letter: 0;
+  @for $i from 1 through $texts {
+    $max-letters: nth($texts-letters, $i);
+    @for $j from 1 through $max-letters {
+      $letter: $letter + 1;
+      #{calc(100% / $letters / 2 * $letter)} {
+        content: "#{string.slice(nth($text, $i), 1, $j)}";
+      }
+    }
+    @for $j from $max-letters through 1 {
+      $letter: $letter + 1;
+      #{calc(100% / $letters / 2 * $letter)} {
+        content: "#{string.slice(nth($text, $i), 1, $j)}";
+      }
+    }
+  }
+}
+
+@keyframes cursor {
+  from ,49% {
+    opacity: 1;
+  }
+  50%, to {
+    opacity: 0;
+  }
+}

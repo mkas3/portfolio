@@ -1,0 +1,79 @@
+@import "src/sass/variables";
+
+.burger-wrapper {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  align-items: baseline;
+  justify-content: right;
+
+  .background {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: $background-color;
+    background-color: $text-color;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 30vw;
+
+    a {
+      &:hover {
+        transition: 0.1s;
+        color: change-color($background-color, $alpha: 0.8);
+      }
+    }
+  }
+
+  .burger {
+    cursor: pointer;
+    z-index: 50;
+    margin-right: 92px;
+    margin-top: 32px;
+    display: flex;
+    align-items: center;
+    width: 40px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background-color: $text-color;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .burger-wrapper {
+    .background {
+      width: 40vw;
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .burger-wrapper {
+    .background {
+      width: 100vw;
+    }
+    .burger {
+      margin-right: 64px;
+    }
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .burger-wrapper {
+    .burger {
+      margin-right: 48px;
+    }
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .burger-wrapper {
+    .burger {
+      margin-right: 24px;
+    }
+  }
+}

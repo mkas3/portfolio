@@ -1,0 +1,72 @@
+@import "src/sass/variables";
+
+.header {
+  position: fixed;
+  top: 0;
+  height: 100px;
+  width: 100%;
+  z-index: 200;
+  overflow: hidden;
+
+  .wrapper {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 36px;
+    font-weight: 700;
+
+    .logo {
+      padding-left: 92px;
+    }
+
+    .navigation {
+      display: flex;
+      width: 50%;
+      align-items: center;
+      justify-content: center;
+      column-gap: 24px;
+      font-size: 16px;
+      font-weight: 500;
+
+      a {
+        &:hover {
+          transition: 0.1s;
+          color: change-color($text-color, $alpha: 0.8);
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .header {
+    .wrapper {
+      .logo {
+        padding-left: 64px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .header {
+    .wrapper {
+      .logo {
+        font-size: 32px;
+        padding-left: 48px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .header {
+    .wrapper {
+      .logo {
+        font-size: 30px;
+        padding-left: 24px;
+      }
+    }
+  }
+}
