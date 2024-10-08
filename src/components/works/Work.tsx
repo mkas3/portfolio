@@ -7,6 +7,7 @@ export interface IWork {
   description: string;
   image: string;
   href: string;
+  github: string;
   stack: string[];
 }
 
@@ -64,9 +65,14 @@ export const Work = ({ work, isLastWork = false }: WorkProps) => {
             <StackElement key={index} title={el} />
           ))}
         </motion.div>
-        <motion.a style={{ x }} href={work.href} className='btn'>
-          Демо
-        </motion.a>
+        <motion.div style={{ x }} className='buttons'>
+          <a href={work.href} className='btn'>
+            Демо
+          </a>
+          <a href={work.github} className='btn alt'>
+            Github
+          </a>
+        </motion.div>
       </motion.div>
     </section>
   );

@@ -2,23 +2,39 @@
   {
     "title": "Brief Me",
     "description": "Сайт по заказу логотипа посредством брифа",
-    "image": "/works/1.png",
-    "href": "/demo/brief",
+    "image": "/works/brief.png",
+    "href": "https://maxioriginal.ru",
+    "github": "https://github.com/MKas3/brief",
     "stack": [
       "Typescript",
       "Next",
       "Recoil",
       "Tailwind",
+      "Framer Motion",
       "Nest",
       "Prisma",
       "PostgreSQL"
     ]
   },
   {
+    "title": "Portfolio",
+    "description": "Сайт-портфолио",
+    "image": "/works/portfolio.png",
+    "href": "/",
+    "github": "https://github.com/MKas3/portfolio",
+    "stack": [
+      "Typescript",
+      "React",
+      "Sass",
+      "Framer Motion"
+    ]
+  },
+  {
     "title": "Transactions",
     "description": "Сайт для удобного мониторинга своих транзакций",
-    "image": "/works/2.png",
-    "href": "/demo/brief",
+    "image": "/works/transactions.png",
+    "href": "/demo/transactions",
+    "github": "https://github.com/MKas3/transactions",
     "stack": [
       "Typescript",
       "React",
@@ -26,21 +42,6 @@
       "Tailwind",
       "Nest",
       "TypeORM",
-      "PostgreSQL"
-    ]
-  },
-  {
-    "title": "Shop",
-    "description": "Простейший сайт-магазин для покупки товаров",
-    "image": "/works/3.png",
-    "href": "/demo/brief",
-    "stack": [
-      "Typescript",
-      "React",
-      "MobX",
-      "Tailwind",
-      "Express",
-      "Sequelize",
       "PostgreSQL"
     ]
   }

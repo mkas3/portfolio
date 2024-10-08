@@ -17,7 +17,7 @@ export const Contacts = () => {
           <img src='/contacts/hh.svg' alt='HH' />
         </a>
       </div>
-      <p className='copyright'>©2023 MKas3, All rights reserved.</p>
+      <p className='copyright'>©2024 MKas3, All rights reserved.</p>
     </section>
   );
 };

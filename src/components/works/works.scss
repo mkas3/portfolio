@@ -88,9 +88,19 @@
         }
       }
 
-      .btn {
-        height: 60px;
-        width: 250px;
+      .buttons {
+        display: flex;
+        column-gap: 2vw;
+
+        .btn {
+          height: 60px;
+          width: 250px;
+
+          .alt {
+            background-color: transparent;
+            border: 2px solid $primary-color;
+          }
+        }
       }
     }
   }
@@ -109,9 +119,11 @@
         .title {
           font-size: 32px;
         }
-       .btn {
-         width: 200px;
-       }
+        .buttons {
+           .btn {
+             width: 200px;
+           }
+        }
       }
     }
   }
@@ -129,8 +141,10 @@
         .description {
           font-size: 14px;
         }
-        .btn {
-          height: 55px;
+        .buttons {
+          .btn {
+            height: 55px;
+          }
         }
       }
     }
@@ -157,10 +171,14 @@
           padding-block: 10px;
         }
 
-        .btn {
-          font-size: 24px;
-          height: 35px;
-          width: 250px;
+        .buttons {
+          flex-direction: column;
+          row-gap: 1vh;
+          .btn {
+            font-size: 24px;
+            height: 35px;
+            width: 250px;
+          }
         }
       }
 
